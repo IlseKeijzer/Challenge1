@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap');
+
+body{
+	min-width: 360px;
+	max-width: 100%;
+	height: auto;
+	margin: 0;
+	background-image: url(../images/phone-wallpaper.jpg);
+	background-repeat: no-repeat;
+  	background-size: 100% 100%;
+}
+
+/* HEADER FIN*/
+header{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+ 	align-items: center;
+	background-color: white;
+	height: 60px; 
+	width: 100%;
+	margin: 0px;
+}
+nav{
+	display: none;
+}
+header div{
+	display: flex;
+	justify-content: flex-end;
+}
+header p{
+	width: 65%;
+	font-size: 2vw;
+
+	font-family: 'Raleway';
+	font-weight: bold;
+	text-align: center;
+}
+#logo{
+	margin: 0 20px;
+	height:40px; 
+	width:40px;
+}
+#user{
+	align-self: center;
+	margin: 0 20px 0 10px;
+	height:30px; 
+	width:30px;	
+	border-radius: 90%;
+}
+
+
+/* NOTES */
+#calendar{
+	background-image: url(../images/calendar.png);
+	background-size: 100% 100%;
+	height: auto;
+	width: 30%;
+}
+.notes{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	margin: 0 15px;
+}
+.notes div{
+	background-color: white;
+	border-radius: 10px;
+	width: 30%;
+	height: auto;
+	margin: 0;
+}
+.notes div h1{
+	font-family: 'Raleway';
+	font-size: 6vw;
+	text-align: center;
+	margin: 20px 0 0 0;
+}
+.notes div h3{
+	font-family: 'Raleway';
+	font-size: 2.5vw;
+	text-align: center;
+	margin: 0 0 20px 0 ;
+}
+
+
+.donut, .radar, .bar, .sliders{
+	background-color: white;
+	border-radius: 10px;
+	width: auto;
+	height: auto;
+	margin: 0 15px;
+}
+
+/* DONUT */
+.donut{
+	display: flex;
+	justify-content: space-around;
+}
+label{
+	font-family: 'Raleway';
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	margin: 20px;	
+}
+.donut div{
+	position: relative;
+	height:auto; 
+	width:25%;
+}
+.donut canvas{
+	min-height: 0;
+	max-height: 100px;
+	min-width: 0;
+	max-width: 100px;
+}
+.donut label{
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-around;
+	margin-top: 20px;
+	font-family: 'Raleway';
+	font-weight: bold;
+}
+
+
+/* RADAR */
+.radar{
+	position: relative;
+	height:auto; 
+	width:auto;
+	max-width: 100%;
+}
+.radar canvas{
+	display: inline-block;
+	margin:25px 0;
+	min-width: 0;
+	max-width: 500px;
+	min-height: 0;
+	max-height: 300px;
+}
+
+
+/*SLIDERS*/
+input{
+	width: 90%;
+	height: 20px;
+	display: block;
+	margin: 20px auto;
+}
+.sliders{
+	padding-top: 20px;
+	display: none;
+}
+
+
+
+
+/* COLUMN */
+.bar {	
+	margin-bottom: 50px;
+	display: flex;
+}
+#columnChart{
+	/*min-width: 0;*/
+	width: 90%;
+	height: auto;
+	/*min-height: 0;
+	max-height: 300px;*/
+	/* min-width: 0;
+	max-width: 500px; */
+	margin:20px;
+}
+
+
+
+
+
+
+
+
+
+
+

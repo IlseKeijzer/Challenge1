@@ -1,11 +1,120 @@
 <!DOCTYPE html>
 <html>
+	<!-- Not everything works as intended, and for some reason i couldn't move the javascript pieces to a different file without messing it up. So they're here, in the worst way possible. -->
 	<head>
-		<title></title>
-		<link rel="stylesheet" type="text/css" href="styles/.css">
-		<script type="text/javascript" src-"scripts/radar.js"></script>
-	</head>
-	<body>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
+		<link rel="stylesheet" type="text/css" href="styles/main.css">
+		<link rel="stylesheet" type="text/css" href="styles/grid-layout.css">
+
+		
+		<title>SpaceX - Bioshock Battle</title>
+	</head>
+	<body class="grid-container"> 
+		<!-- Want this to have a background image, with CLOUDS, this = biggest container!! Let's go ahead and start with some div's and work our way to perfection!-->
+		<header class="header">
+			<!-- First div will be the header, i suppose, since we dont have a navigation bar :thinking: so let's change it -->
+			<!-- In the header:
+				- A symbol for the non-exiting menu
+				- A logo, in the middle of the header
+				- A piece of text, welcoming back the user
+				- The user's image, which will be Elizabeth
+			-->
+			<img src="images/logo.jpg" id="logo">
+		 		<!-- The logo, so i guess an image -->
+		 	</img>
+
+		 	<nav class="nav">
+			 		<!-- The symbol - got cancelled -->
+				 	<ul>
+						<li><a href="">Dashboard</a></li>
+						<li><a href="">User</a></li>
+						<li><a href="">Map</a></li>
+						<li><a href="">Notifications</a></li>
+						<li><a href="">Settings</a></li>
+					</ul>
+			 </nav>
+		 
+		 	<div>
+		 		<p>
+			 		<!-- The text, so i guess a paragraph, let's not make the name changing a thing -->
+			 		Welcome back, Elizabeth
+			 	</p>
+			 	
+				<img src="images/user.png" id="user">
+						<!-- The image, which will be ROUND -->
+				 </img>
+		 	</div>
+		</header>
+
+		<div class="notes">
+			<!-- second should be a container for the first list of things, 
+			ALSO DONT FORGET TO MAKE A GRID SYSTEM!!! -->
+			<div id="calendar">
+				<!-- calendar!! -->
+			</div>
+			<div>
+				<!-- Simple note: 203 People aboard -->
+				<h1>203</h1>
+				<h3>People Aboard</h3>
+			</div>
+			<div>
+				<!-- Simple note: 5 events ongoing -->
+				<h1>5</h1>
+				<h3>Events Ongoing</h3>
+			</div>
+		</div>
+
+		<div class="donut">
+			<!-- Third up, the first important chart, the DONUTS -->
+			<div id="fuelChart">
+				<label>Fuel</label>
+				<canvas id="fuelProgress"></canvas>
+				
+			</div>
+			<div id="powerChart">
+				<label>Power</label>
+				<canvas id="powerProgress"></canvas>
+				
+			</div>
+			<div id="hullDamage">
+				<label>Hull Damage</label>
+				<canvas id="damageProgress"></canvas>
+				
+			</div>
+		</div>
+		
+		<div class="radar">
+			<!-- Fourth in line, the RADAR, which will need the sliders as well, but how, we shall see -->
+			<canvas id="radarChart"></canvas>		
+			
+		</div>
+		
+		<div class="sliders">
+			<label>Fuel</label>
+			<input type="range" id="fuelslider" min="0" max="100" value="50">
+			
+			<label>Power</label>
+			<input type="range" id="powerslider" min="0" max="100" value="50">	
+			
+			<label>Accuracy</label>
+			<input type="range" id="accslider" min="0" max="100" value="50">	
+			
+			<label>Defense</label>
+			<input type="range" id="defslider" min="0" max="100" value="50">	
+		 
+		 	<label>Speed</label>
+		 	<input type="range" id="speedslider" min="0" macx="100" value="50">	
+		</div>
+			
+		<div class="bar">
+			<!-- Fifth is the last big thing, the COLUMN chart, filled with rations -->
+			<div id="columnChart"></div>
+			
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<script type="text/javascript" src="scripts/index.js"></script>
 	</body>
 </html>
